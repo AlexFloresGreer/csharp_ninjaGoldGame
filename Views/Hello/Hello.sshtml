@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ninja Gold</title>
+        <link rel="stylesheet" href="Content/style.css"/>
+    </head>
+    <body>
+    <div class="center">
+            <h1>Ninja Gold!</h1>
+                <p>Your Gold: @ViewBag.gold </p>
+            <br>
+            <br>
+
+        <div class="houses">
+            <h3>Farm</h3>
+            <h5>(earns 10-20 golds)</h5>
+            <form action="/process_money" method="post">
+                <input type="hidden" name="building" value="farm" />
+                <input type="submit" value="Find Gold!"/>
+            </form>
+        </div>
+
+        <div class="houses">
+            <h3>Cave</h3>
+            <h5>(earns 5-10 golds)</h5>        
+            <form action="/process_money" method="post">
+                <input type="hidden" name="building" value="cave" />
+                <input type="submit" value="Find Gold!"/>
+            </form>
+        </div>
+
+        <div class="houses">
+            <h3>House</h3>
+            <h5>(earns 2-5 golds)</h5>  
+            <form action="/process_money" method="post">
+                <input type="hidden" name="building" value="house" />
+                <input type="submit" value="Find Gold!"/>
+            </form>
+        </div>
+        
+        <div class="houses">
+            <h3>Casino</h3>
+            <h5>(earns 0-50 golds)</h5>  
+            <form action="/process_money" method="post">
+                <input type="hidden" name="building" value="casino" />
+                <input type="submit" value="Find Gold!"/>
+            </form>
+        </div>
+        <br>
+        
+        <h5>Activities:</h5>
+       @ViewBag.activities
+        
+
+    
+
+            
+        
+
+        
+
+    </div>
+    </body>
+</html>
